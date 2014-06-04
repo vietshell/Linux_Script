@@ -27,10 +27,10 @@ fi
 #install MySQL New Version 5.7
 mkdir package_mysql
 cd package_mysql
-wget https://github.com/vietshell/Linux_Script/blob/master/mysql%205.7/MySQL-client-5.7.4_m14-1.el6.x86_64.rpm
-wget https://github.com/vietshell/Linux_Script/blob/master/mysql%205.7/MySQL-server-5.7.4_m14-1.el6.x86_64.rpm
-wget https://github.com/vietshell/Linux_Script/blob/master/mysql%205.7/MySQL-shared-5.7.4_m14-1.el6.x86_64.rpm
-wget https://github.com/vietshell/Linux_Script/blob/master/mysql%205.7/galera-25.3.5-1.rhel6.x86_64.rpm
+wget https://raw.githubusercontent.com/vietshell/Linux_Script/master/mysql%205.7/MySQL-client-5.7.4_m14-1.el6.x86_64.rpm
+wget https://raw.githubusercontent.com/vietshell/Linux_Script/master/mysql%205.7/MySQL-server-5.7.4_m14-1.el6.x86_64.rpm
+wget https://raw.githubusercontent.com/vietshell/Linux_Script/master/mysql%205.7/MySQL-shared-5.7.4_m14-1.el6.x86_64.rpm
+wget https://raw.githubusercontent.com/vietshell/Linux_Script/master/mysql%205.7/galera-25.3.5-1.rhel6.x86_64.rpm
 packg=`ls`
 yum -y install $packg
 clear
