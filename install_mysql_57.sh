@@ -17,7 +17,7 @@ fi
 
 #check wget install
 check_wget=`rpm -qa | grep wget`
-if [ "$check_mysql" = "" ]; then
+if [ "$check_wget" = "" ]; then
 echo "Install wget"
 sleep 5
 yum -y install wget
@@ -35,3 +35,18 @@ packg=`ls`
 yum -y install $packg
 clear
 echo "Install MySQL Success Full"
+cd ..
+rm -rf package_mysql
+
+clear
+echo "Install Success"
+echo "Start Service"
+/etc/init.d/mysql restart
+echo "Setting MySQL"
+pass_mysql_default=`grep ^[^#] /root/.mysql_secret`
+#mysql -uroot -p"Nguyenthenam2501@" -h localhost -A -e "SET PASSWORD=PASSWORD('Nguyent@@@@@henam2501@');"
+echo "password defaul $pass_mysql_default"
+
+
+echo "create user 'root'@'%' IDENTIFIED by 'Nguyent@@@@@henam2501@'" | mysql -u root -pNguyent@@@@@henam2501@
+echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION" | mysql -u root -pNguyent@@@@@henam2501@
