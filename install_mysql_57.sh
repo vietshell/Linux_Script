@@ -48,9 +48,6 @@ pass_mysql_default=`grep ^[^#] /root/.mysql_secret`
 echo "password defaul $pass_mysql_default"
 echo "Please login mysql and change password root"
 echo "Can you Set password root:"
-echo "SET PASSWORD=PASSWORD('Nguyenthenam2501@')"
+echo "SET PASSWORD=PASSWORD('HSPvps2013@')"
 echo "Thanks!"
 
-
-echo "create user 'root'@'%' IDENTIFIED by 'Nguyenthenam2501@'" | mysql -u root -pNguyenthenam2501@
-echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION" | mysql -u root -pNguyenthenam2501@
